@@ -1,6 +1,5 @@
 /* Main Routine. */
 
-
 #include<iostream>
 #include<string>
 
@@ -13,14 +12,23 @@ int main(void)
 	ComplexNumber first(1, 2);
 	ComplexNumber second(2, 1);
 
-	cout << first << " Plus " << second << " = " << first + second << endl;
+	cout << "We have two complex numbers: " << first << " and " << second << endl;
 
+	cout << "Here they are added: " << first + second << endl;
 
-	cout << first << " * " <<  second << " = " << first * second << endl;
+	cout << "Here they are multiplied: " << first * second << endl;
 
-	cout << "++" << first << " = " << ++first << endl;
+	cout << "Here we use the prefix ++ operator on the first number: " << ++first << endl;
 
-	//cout << first++ << endl;
+	cout << "Here we use the postfix ++ operator on the first number: " << first++ << endl;
 
+	cout << "Here is the current value of the first number: " << first << endl;
+
+	cout << "Here we use the prefix -- operator on the first number: " << --first << endl;
+
+	cout << "Here we use the postfix -- operator on the first number: " << first-- << endl;
+
+	cout << "Here is the current value of the first number: " << first << endl;
+	
 	return 0;
 }

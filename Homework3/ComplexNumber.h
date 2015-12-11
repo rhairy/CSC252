@@ -16,6 +16,9 @@ public:
 	void setReal(double val);
 	void setImag(double val);
 	ComplexNumber& operator++();
+	ComplexNumber operator++(int unused);
+	ComplexNumber& operator--();
+	ComplexNumber operator--(int unused);
 private:
 	double m_real;
 	double m_imag;

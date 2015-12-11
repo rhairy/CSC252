@@ -7,7 +7,6 @@ ComplexNumber::ComplexNumber(double real, double imag)
 {
 }
 
-
 ComplexNumber::~ComplexNumber()
 {
 }
@@ -43,13 +42,18 @@ ComplexNumber operator+(const ComplexNumber& one, const ComplexNumber& two)
 	return result;
 }
 
-/* Doesn't work! */
 ComplexNumber& ComplexNumber::operator++()
 {
 	this->m_real += 1;
 	this->m_imag += 1;
 
 	return *this;
+}
+
+ComplexNumber ComplexNumber::operator++(int unused)
+{
+  ComplexNumber result(this->m_real++, this->m_imag++);
+  return result;
 }
 
 void operator+=(ComplexNumber& one, const ComplexNumber& two)
@@ -62,6 +66,20 @@ ComplexNumber operator-(const ComplexNumber& one, const ComplexNumber& two)
 {
 	ComplexNumber result(one.getReal() - two.getReal(), one.getImag() - two.getImag());
 	return result;
+}
+
+ComplexNumber& ComplexNumber::operator--()
+{
+  this->m_real--;
+  this->m_imag--;
+
+  return *this;
+}
+
+ComplexNumber ComplexNumber::operator--(int unused)
+{
+  ComplexNumber result(this->m_real--, this->m_imag--);
+  return result;
 }
 
 void operator-=(ComplexNumber& one, const ComplexNumber& two)
