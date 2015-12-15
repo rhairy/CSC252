@@ -29,6 +29,12 @@ int main(void)
 	cout << "Here we use the postfix -- operator on the first number: " << first-- << endl;
 
 	cout << "Here is the current value of the first number: " << first << endl;
+
+	cout << "Enter the real and imaginary parts of a complex number, separted by newlines: ";
+	ComplexNumber third;
+	cin >> third;
+
+	cout << "You entered: " << third << endl;
 	
 	return 0;
 }

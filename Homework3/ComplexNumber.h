@@ -7,7 +7,8 @@ using namespace std;
 
 class ComplexNumber
 {
-public:
+ public:
+        ComplexNumber() {}
 	ComplexNumber(double real, double imag);
 	~ComplexNumber();
 	double getReal() const;
