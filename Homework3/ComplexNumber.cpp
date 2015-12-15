@@ -100,3 +100,16 @@ ostream& operator<<(ostream& os, const ComplexNumber& object)
 	return os;
 }
 
+istream& operator>>(istream& is, ComplexNumber& object)
+{
+	double real;
+	double imag;
+
+	is >> real;
+	is >> imag;
+
+	object.setReal(real);
+	object.setImag(imag);
+
+	return is;
+}
