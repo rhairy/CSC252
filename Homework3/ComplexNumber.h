@@ -30,5 +30,6 @@ void operator+=(ComplexNumber& one, const ComplexNumber& two);
 ComplexNumber operator-(const ComplexNumber& one, const ComplexNumber& two);
 void operator-=(ComplexNumber& one, const ComplexNumber& two);
 ComplexNumber operator*(const ComplexNumber& left, const ComplexNumber& right);
+ComplexNumber operator/(const ComplexNumber& left, const ComplexNumber& right);
 ostream& operator<<(ostream& os, const ComplexNumber& object);
 istream& operator>>(istream& is, ComplexNumber& object);

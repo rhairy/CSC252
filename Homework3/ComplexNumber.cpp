@@ -94,6 +94,17 @@ ComplexNumber operator*(const ComplexNumber& left, const ComplexNumber& right)
 	return result;
 }
 
+ComplexNumber operator/(const ComplexNumber& left, const ComplexNumber& right)
+{
+  ComplexNumber conjugate(right.getReal(), right.getImag() * -1);
+  ComplexNumber numerator = left * conjugate;
+  ComplexNumber denominator = right * conjugate;
+  
+  numerator.setReal( numerator.getReal()/ denominator.getReal() );
+  numerator.setImag( numerator.getImag() / denominator.getReal() );
+
+  return numerator;
+}
 ostream& operator<<(ostream& os, const ComplexNumber& object)
 {
 	os << object.getReal() << "+" << object.getImag() << "i";

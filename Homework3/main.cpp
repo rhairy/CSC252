@@ -18,6 +18,8 @@ int main(void)
 
 	cout << "Here they are multiplied: " << first * second << endl;
 
+	cout << "Here they are divided: " << first / second << endl;
+
 	cout << "Here we use the prefix ++ operator on the first number: " << ++first << endl;
 
 	cout << "Here we use the postfix ++ operator on the first number: " << first++ << endl;
@@ -35,6 +37,6 @@ int main(void)
 	cin >> third;
 
 	cout << "You entered: " << third << endl;
-	
+
 	return 0;
 }
